@@ -1,0 +1,16 @@
+            <div class="generalcontainer">
+                <button type="submit" class="registerbtn">Register</button>
+                <div class="logincontainer">
+                    <div class="loginlayoutblock">   
+                        <h2 class="logintext">Login</h2>
+                    </div>
+                    <div class="login">
+                        <form name="loginform" (ngSubmit)="onLogin(f)" #f="ngForm">
+                            <input type="text" placeholder="Enter Username" name="username" ngModel />
+                            <input type="password" placeholder="Enter Password" name="password" ngModel />
+                            <button type="submit" class="loginbtn">Login</button>
+                        </form>
+                        <a [routerLink]="['/profile/RvHap']">RVHAP</a>
+                    </div>
+                </div>
+            </div>

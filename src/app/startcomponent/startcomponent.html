@@ -1,0 +1,13 @@
+<div *ngIf="invoices && cars">
+
+<h1>Invoices</h1>
+	<ul>
+		<li *ngFor="let invoice of invoices"><a [routerLink]="['invoice/' + invoice.invoicenr]">{{invoice.invoicenr}}     {{invoice.price}}     {{invoice.status}}</a></li>
+	</ul>
+
+<h1>Cars</h1>
+	<ul>
+		<li *ngFor="let car of cars"><a [routerLink]="['vehicle/' + car.licensenr]">{{car.licensenr}}     {{car.type}}</a></li>
+	</ul>
+
+</div>
