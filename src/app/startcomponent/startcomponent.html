@@ -2,7 +2,7 @@
 
 <h1>Invoices</h1>
 	<ul>
-		<li *ngFor="let invoice of invoices"><a [routerLink]="['invoice/' + invoice.invoicenr]">{{invoice.invoicenr}}     {{invoice.price}}     {{invoice.status}}</a></li>
+		<li *ngFor="let invoice of invoices"><a [routerLink]="['invoice/' + invoice.month]">{{invoice.month}}     {{invoice.price}}</a></li>
 	</ul>
 
 <h1>Cars</h1>

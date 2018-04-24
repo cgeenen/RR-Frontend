@@ -23,4 +23,8 @@ export class VehicleComponent implements OnInit{
 	ngOnInit(){
 		this.route.params.subscribe(params => { this.licensenr = params["licensenr"]; this.service.getVehicle(this.licensenr).subscribe(p=> this.vehicle = p); })
 	}
+
+	onEditVehicle(form: NgForm) {
+		this.service.editVehicle(form.value.licensenr, form.value.type).subscribe(p => this.vehicle = p);
+	}
 }

@@ -21,7 +21,7 @@ export class AuthComponent implements OnInit{
   }
 
   ngOnInit(){
-    this.testinvoice = new Invoice("1");
+    //this.testinvoice = new Invoice("1");
   }
 
   onLogin(form: NgForm) {

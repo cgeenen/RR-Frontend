@@ -3,18 +3,17 @@ import {SubInvoice} from "app/model/SubInvoice";
 
 export class Invoice {
 	public invoicenr: string;
-	public date: string;
+	public month: string;
 	public price: string;
     public status: string;
 	public cars: Car[];
 	public subinvoices: SubInvoice[];
 
     
-    constructor(invoicenr: string, price: string, status: string)
+    constructor(price: string, month: string)
     {
-        this.invoicenr = invoicenr;
         this.price = price;
-        this.status = status;
+        this.month = month;
     }
 
 }

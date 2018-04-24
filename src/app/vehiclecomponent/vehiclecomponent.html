@@ -1,0 +1,12 @@
+<div *ngIf="vehicle">
+	<h1>{{vehicle.licensenr}}</h1>
+	<h1>{{vehicle.type}}</h1>
+
+
+    <form name="editvehicleForm" (ngSubmit)="onEditVehicle(f)" #f="ngForm">
+        <input type="text" placeholder="Vehicle licensenr" name="licensenr" value="{{vehicle.licensenr}}" ngModel="{{vehicle.licensenr}}" />
+        <input type="text" placeholder="Vehicle type" name="type" value="{{vehicle.type}}" ngModel="{{vehicle.type}}"/>
+        <button type="submit" class="loginbtn">Wijzigen</button>
+    </form>
+
+</div>

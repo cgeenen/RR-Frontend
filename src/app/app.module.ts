@@ -16,7 +16,7 @@ const appRoutes: Routes = [
   { path: '',                      redirectTo: 'login',        pathMatch: 'full'},
   { path: 'login',                                             component: AuthComponent},
   { path: 'home',                                              component: StartComponent},
-  { path: 'home/invoice/:invoicenr',                           component: InvoiceComponent},
+  { path: 'home/invoice/:month',                               component: InvoiceComponent},
   { path: 'home/vehicle/:licensenr',                           component: VehicleComponent}
 ];
 
