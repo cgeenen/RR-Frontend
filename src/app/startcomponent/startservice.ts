@@ -26,7 +26,7 @@ export class StartService {
         return this.http.get('http://localhost:8080/RR_RekeningRijder/protected/main/user', requestOptions).map((res: Response) => <User>res.json());
     }
 
-    getInvoice(invoicenumber: string): Observable<Invoice[]> {
+    getInvoice(month: string): Observable<Invoice> {
     	const headers: Headers = new Headers();
         headers.append('Authorization', 'Bearer ' + localStorage.getItem("jwt"));
 
@@ -34,7 +34,7 @@ export class StartService {
         requestOptions.headers = headers;
 
         // Here we get the invoice with all the subinvoices.
-        return this.http.get('http://localhost:8080/RR_RekeningRijder/protected/protected/main/invoices/1', requestOptions).map((res: Response) => <Invoice[]>res.json());
+        return this.http.get('http://localhost:8080/RR_RekeningRijder/protected/main/invoices/' + month, requestOptions).map((res: Response) => <Invoice>res.json());
     }
 
     getAllInvoices(): Observable<Invoice[]> {

@@ -6,14 +6,16 @@ export class Invoice {
 	public month: string;
 	public price: string;
     public status: string;
-	public cars: Car[];
 	public subinvoices: SubInvoice[];
 
     
-    constructor(price: string, month: string)
+    constructor(invoicenr: string, month: string, price: string, status: string, subinvoices: SubInvoice[])
     {
-        this.price = price;
+        this.invoicenr = invoicenr;
         this.month = month;
+        this.price = price;
+        this.status = status;
+        this.subinvoices = subinvoices;
     }
 
 }

@@ -16,12 +16,12 @@ import {Invoice} from "app/model/Invoice";
 export class InvoiceComponent implements OnInit{
 
 	// Has to be invoices array because an invoice is now a subinvoice. 
-	invoice: Invoice[];
-	invoicenr: string;
+	invoice: Invoice;
+	month: string;
 
 	constructor(private service: StartService , private route: ActivatedRoute, private router: Router) { }
 
 	ngOnInit(){
-		this.route.params.subscribe(params => { this.invoicenr = params["invoicenr"]; this.service.getInvoice(this.invoicenr).subscribe(p=> this.invoice = p); })
+		this.route.params.subscribe(params => { this.month = params["month"]; this.service.getInvoice(this.month).subscribe(p=> this.invoice = p); })
 	}
 }

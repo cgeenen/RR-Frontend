@@ -1,0 +1,13 @@
+<div *ngIf="invoice"> 
+
+	<h1>{{invoice.invoicenr}}</h1>
+	<h1>{{invoice.month}}</h1>
+	<h1>{{invoice.price}}</h1>
+	<h1>{{invoice.status}}</h1>
+
+	<div *ngFor="let subinvoice of invoice.subinvoices">
+		<h1>Subinvoice invoicenr:{{subinvoice.invoicenr}}</h1>
+	</div>
+
+
+</div>

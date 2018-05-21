@@ -29,6 +29,7 @@ export class StartComponent implements OnInit{
   
 	ngOnInit(){
 	  	if(localStorage.getItem("user")) {
+        console.log(localStorage.getItem("user"));
 	  		// First test if the constructor with optional values work so its not giving all the subinvoices to the first loaded list:
 	  		// this.testcar = new Car("dd-xx-ww", "yaris");
 	  		// this.testinvoice = new Invoice("1");
